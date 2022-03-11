@@ -15,8 +15,8 @@
   --text-color: var(--colors-pallete-green-darker);
   --text-color-light: hsl(36, 72%, 56%);
   --input-color: hsl(51, 100%, 85%);
-  --body-color: #fffdef;
-  --container-color:#fffdef;
+  --body-color: #FFFADE;
+  --container-color:#FFFADE;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
@@ -1203,7 +1203,7 @@ color: var(--colors-pallete-red);
   background: transparent;
   outline: none;
   border: 0;
-  color: var(--colors-pallete-yellow);
+  color: var(--colors-pallete-beige);
   letter-spacing: 0.1em;
   font-family: monospace;
   font-size: 17px;
@@ -1219,7 +1219,7 @@ color: var(--colors-pallete-red);
  .cube .bg-top {
   position: absolute;
   height: 10px;
-  background: var(--colors-pallete-yellow);
+  background: var(--colors-pallete-beige);
   bottom: 100%;
   left: 5px;
   right: -5px;
@@ -1238,13 +1238,13 @@ color: var(--colors-pallete-red);
   bottom: 0;
   top: 0;
   right: 0;
-  background: var(--colors-pallete-yellow);
+  background: var(--colors-pallete-beige);
   transition: all 0.4s;
  }
  
  .cube .bg-right {
   position: absolute;
-  background: var(--colors-pallete-yellow);
+  background: var(--colors-pallete-beige);
   top: -5px;
   z-index: 0;
   bottom: 5px;
@@ -1273,7 +1273,7 @@ color: var(--colors-pallete-red);
  }
  
  .cube:hover .bg-inner {
-  background: var(--colors-pallete-yellow);
+  background: var(--colors-pallete-beige);
   transition: all 0.4s;
  }
  
