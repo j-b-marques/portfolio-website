@@ -7,20 +7,21 @@
   /*Fav Color*/
   --hue-color: 260; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
-  --first-color: hsl(193, 34%, 30%);
-  --first-color-second: hsl(193, 34%, 30%);
+  --first-color: var(--colors-pallete-green);
+  --first-color-second: var(--colors-pallete-beige);
   --first-color-alternative: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(51, 100%, 85%);
-  --title-color: var(--colors-pallete-yellow);
-  --text-color: black;
+  --title-color: var(--colors-pallete-green);
+  --text-color: var(--colors-pallete-green-darker);
   --text-color-light: hsl(36, 72%, 56%);
   --input-color: hsl(51, 100%, 85%);
-  --body-color: #fff;
-  --container-color: #fff;
+  --body-color: #fffdef;
+  --container-color:#fffdef;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
   --colors-pallete-green: hsl(193, 34%, 30%);
+  --colors-pallete-green-darker: hsl(194, 34%, 17%);
   --colors-pallete-beige: hsl(51, 100%, 85%);
   --colors-pallete-yellow: hsl(36, 72%, 56%);
   --colors-pallete-red: hsl(359, 58%, 39%);
@@ -199,12 +200,12 @@ button {
 
 .nav_logo,
 .nav_toogle {
-  color: var(--title-color);
+  color: var(--colors-pallete-bordeaux);
   font-weight: var(--font-medium);
 }
 
 .nav_logo:hover {
-  color: var(--first-color);
+  color: var(--colors-pallete-green);
 }
 
 .nav_toggle {
@@ -241,12 +242,12 @@ button {
   flex-direction: column;
   align-items: center;
   font: var(--small-font-size);
-  color: var(--title-color);
+  color: var(--colors-pallete-bordeaux);
   font-weight: var(--font-medium);
 }
 
 .nav_link:hover {
-  color: var(--first-color);
+  color: var(--colors-pallete-green);
 }
 
 .nav_icon {
@@ -305,12 +306,14 @@ button {
 }
 
 .home_social-icon:hover {
-  color: var(--first-color-alternative);
+  color: var(--colors-pallete-yellow);
 }
 
 .home_blob {
   width: 200px;
-  fill: var(--first-color);
+  /* fill: var(--first-color);
+   */
+  fill: var(--colors-pallete-bordeaux);
 }
 
 .home_blob-img {
@@ -374,7 +377,7 @@ button {
 }
 
 .button:hover {
-  background-color: var(--first-color-alternative);
+  background-color: var(--colors-pallete-yellow);
 }
 
 .button_icon {
@@ -408,7 +411,7 @@ button {
 
 .button--link:hover {
   background-color: transparent;
-  color: var(--first-color-alternative);
+  color: var(--colors-pallete-yellow);
 }
 
 /**********  ABOUT ************/
@@ -451,6 +454,10 @@ button {
   justify-content: center;
 }
 
+.section_subtitle{
+color: var(--colors-pallete-red);
+}
+
 /********** SERVICES ************/
 
 .services_container {
@@ -481,6 +488,7 @@ button {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
+  color: var(--colors-pallete-bordeaux);
 }
 
 .services_button {
@@ -714,7 +722,7 @@ button {
   row-gap: 3.5rem;
 }
 .footer_bg {
-  background-color: var(--first-color-second);
+  background-color: var(--colors-pallete-green-darker);
   padding: 2rem 0 3rem;
 }
 
@@ -775,7 +783,7 @@ button {
 }
 
 .scrollup:hover {
-  background-color: var(--first-color-alternative);
+  background-color: var(--colors-pallete-yellow);
 }
 
 .scrollup_icon {
@@ -1051,7 +1059,12 @@ button {
 
   .project_data {
     padding-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
   }
+
 
   .footer_container {
     grid-template-columns: repeat(3, 1fr);
@@ -1140,7 +1153,7 @@ button {
   left: 0;
   display: block;
   border-radius: 50px;
-  background: var(--colors-pallete-beige);
+  background: var(--colors-pallete-red);
   width: 45px;
   height: 45px;
   transition: all 0.3s ease;
@@ -1180,3 +1193,108 @@ button {
 .cta:active {
   transform: scale(0.95);
 }
+
+
+/**/
+/* From cssbuttons.io by @gagan-gv */
+.btn {
+  display: block;
+  padding: 0.7em 1em;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: var(--colors-pallete-yellow);
+  letter-spacing: 0.1em;
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: bold;
+  z-index: 1;
+ }
+ 
+ .cube {
+  position: relative;
+  transition: all 0.5s;
+ }
+ 
+ .cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: var(--colors-pallete-yellow);
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+  transition: all 0.4s;
+ }
+ 
+ .cube .bg-top .bg-inner {
+  bottom: 0;
+ }
+ 
+ .cube .bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background: var(--colors-pallete-yellow);
+  transition: all 0.4s;
+ }
+ 
+ .cube .bg-right {
+  position: absolute;
+  background: var(--colors-pallete-yellow);
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+  transition: all 0.4s;
+ }
+ 
+ .cube .bg-right .bg-inner {
+  left: 0;
+ }
+ 
+ .cube .bg-inner {
+  background: var(--colors-pallete-green);
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+ }
+ 
+ .cube .text {
+  position: relative;
+  transition: all 0.4s;
+ }
+ 
+ .cube:hover .bg-inner {
+  background: var(--colors-pallete-yellow);
+  transition: all 0.4s;
+ }
+ 
+ .cube:hover .text {
+  color: var(--colors-pallete-green);
+  transition: all 0.4s;
+ }
+ 
+ .cube:hover .bg-right,
+ .cube:hover .bg,
+ .cube:hover .bg-top {
+  background: var(--colors-pallete-green);
+ }
+ 
+ .cube:active {
+  z-index: 9999;
+  animation: bounce .1s linear;
+ }
+ 
+ @keyframes bounce {
+  50% {
+   transform: scale(0.9);
+  }
+ }
