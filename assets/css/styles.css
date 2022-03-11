@@ -5,22 +5,26 @@
 
   /** COLORS */
   /*Fav Color*/
- --hue-color: 260;  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --hue-color: 260; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color: hsl(193, 34%, 30%);
+  --first-color-second: hsl(358, 77%, 19%);
   --first-color-alternative: hsl(var(--hue-color), 57%, 53%);
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --first-color-lighter: hsl(51, 100%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --text-color: black;
+  --text-color-light: hsl(36, 72%, 56%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --body-color: #fff;
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-
+  --colors-pallete-green: hsl(193, 34%, 30%);
+  --colors-pallete-beige: hsl(51, 100%, 85%);
+  --colors-pallete-yellow: hsl(36, 72%, 56%);
+  --colors-pallete-red: hsl(359, 58%, 39%);
+  --colors-pallete-bordeaux: hsl(358, 77%, 19%);
 
   /* * FONTS AND TIPOGRAFIA */
   --body-font: "Kanit", sans-serif;
@@ -52,7 +56,6 @@
   --z-fixed: 10;
   --z-modal: 100;
 }
-
 
 /* *FONTS LG DEVICES */
 @media screen and (min-width: 968px) {
@@ -568,11 +571,7 @@ button {
 }
 
 .portfolio_description {
-  margin-bottom: var(--mb-0-75);
-}
-
-.portfolio_button:hover .button_icon {
-  transform: translateX(0.25rem);
+  margin-bottom: 3.2rem;
 }
 
 .swiper-button-prev::after,
@@ -608,10 +607,14 @@ button {
 }
 
 /**********  TESTIMONIAL ************/
+.testimonial {
+  cursor: grab;
+}
 
 .testimonial_data,
 .testimonial_header {
   display: flex;
+  gap: 10px;
 }
 .testimonial_data {
   justify-content: space-between;
@@ -640,7 +643,7 @@ button {
 }
 
 .testimonial_description {
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: 3rem;
 }
 
 .testimonial_icon-star {
@@ -860,6 +863,7 @@ button {
     margin-right: 0;
     margin-bottom: var(--mb-0-25);
   }
+
 
   .testimonial_data,
   .testimonial_description {
