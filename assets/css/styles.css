@@ -8,13 +8,13 @@
   --hue-color: 260; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
   --first-color: hsl(193, 34%, 30%);
-  --first-color-second: hsl(358, 77%, 19%);
+  --first-color-second: hsl(193, 34%, 30%);
   --first-color-alternative: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(51, 100%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --title-color: var(--colors-pallete-yellow);
   --text-color: black;
   --text-color-light: hsl(36, 72%, 56%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --input-color: hsl(51, 100%, 85%);
   --body-color: #fff;
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -554,6 +554,7 @@ button {
 
 .portfolio_container {
   overflow: initial;
+  cursor: pointer;
 }
 .portfolio_content {
   padding: 0 1.5rem;
@@ -738,7 +739,7 @@ button {
 
 .footer_social {
   font-size: 1.25rem;
-  margin-right: var(--mb-1-5);
+  margin-right: 0.5rem;
 }
 
 .footer_social:hover {
@@ -864,7 +865,6 @@ button {
     margin-bottom: var(--mb-0-25);
   }
 
-
   .testimonial_data,
   .testimonial_description {
     text-align: center;
@@ -893,6 +893,10 @@ button {
   .contact_container,
   .footer_container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio_container {
+    padding-bottom: 80px !important;
   }
 
   .qualification_sections {
@@ -1117,4 +1121,62 @@ button {
   .contact_inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/****Componentes****/
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: var(--colors-pallete-beige);
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--colors-pallete-green);
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--colors-pallete-green);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: var(--colors-pallete-yellow);
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
 }
