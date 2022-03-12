@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Kanit:wght@300;400;500;700&family=Poppins:wght@400;500;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 :root {
   --header-height: 3rem;
 
@@ -15,8 +15,8 @@
   --text-color: var(--colors-pallete-green-darker);
   --text-color-light: hsl(36, 72%, 56%);
   --input-color: hsl(51, 100%, 85%);
-  --body-color: #FFFADE;
-  --container-color:#FFFADE;
+  --body-color: #fff;
+  --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
@@ -28,8 +28,10 @@
   --colors-pallete-bordeaux: hsl(358, 77%, 19%);
 
   /* * FONTS AND TIPOGRAFIA */
-  --body-font: "Kanit", sans-serif;
-  --text-font: "Baloo 2", cursive;
+  /*   --body-font: "Kanit", sans-serif;
+  --text-font: "Baloo 2", cursive; */
+  --body-font: "Roboto", sans-serif;
+  --text-font: "Roboto", sans-serif;
   /*  Sizes  */
   --big-font-size: 2rem;
   --normal-font-size: 0.9838rem;
@@ -215,6 +217,18 @@ button {
 
 .nav_toogle:hover {
   color: var(--first-color);
+}
+
+.name_nav{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.name_nav i{
+  color: var(--colors-pallete-bordeaux);
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -454,8 +468,8 @@ button {
   justify-content: center;
 }
 
-.section_subtitle{
-color: var(--colors-pallete-red);
+.section_subtitle {
+  color: var(--colors-pallete-red);
 }
 
 /********** SERVICES ************/
@@ -1050,7 +1064,6 @@ color: var(--colors-pallete-red);
   }
 
   .project_container {
-    background-color: var(--first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
     grid-template-columns: 1fr max-content;
@@ -1064,7 +1077,6 @@ color: var(--colors-pallete-red);
     gap: 40px;
     justify-content: center;
   }
-
 
   .footer_container {
     grid-template-columns: repeat(3, 1fr);
@@ -1194,7 +1206,6 @@ color: var(--colors-pallete-red);
   transform: scale(0.95);
 }
 
-
 /**/
 /* From cssbuttons.io by @gagan-gv */
 .btn {
@@ -1209,14 +1220,15 @@ color: var(--colors-pallete-red);
   font-size: 17px;
   font-weight: bold;
   z-index: 1;
- }
- 
- .cube {
+}
+
+.cube {
   position: relative;
   transition: all 0.5s;
- }
- 
- .cube .bg-top {
+  width: 30%;
+}
+
+.cube .bg-top {
   position: absolute;
   height: 10px;
   background: var(--colors-pallete-beige);
@@ -1226,13 +1238,13 @@ color: var(--colors-pallete-red);
   transform: skew(-45deg, 0);
   margin: 0;
   transition: all 0.4s;
- }
- 
- .cube .bg-top .bg-inner {
+}
+
+.cube .bg-top .bg-inner {
   bottom: 0;
- }
- 
- .cube .bg {
+}
+
+.cube .bg {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1240,9 +1252,9 @@ color: var(--colors-pallete-red);
   right: 0;
   background: var(--colors-pallete-beige);
   transition: all 0.4s;
- }
- 
- .cube .bg-right {
+}
+
+.cube .bg-right {
   position: absolute;
   background: var(--colors-pallete-beige);
   top: -5px;
@@ -1252,49 +1264,49 @@ color: var(--colors-pallete-red);
   left: 100%;
   transform: skew(0, -45deg);
   transition: all 0.4s;
- }
- 
- .cube .bg-right .bg-inner {
+}
+
+.cube .bg-right .bg-inner {
   left: 0;
- }
- 
- .cube .bg-inner {
+}
+
+.cube .bg-inner {
   background: var(--colors-pallete-green);
   position: absolute;
   left: 2px;
   right: 2px;
   top: 2px;
   bottom: 2px;
- }
- 
- .cube .text {
+}
+
+.cube .text {
   position: relative;
   transition: all 0.4s;
- }
- 
- .cube:hover .bg-inner {
+}
+
+.cube:hover .bg-inner {
   background: var(--colors-pallete-beige);
   transition: all 0.4s;
- }
- 
- .cube:hover .text {
+}
+
+.cube:hover .text {
   color: var(--colors-pallete-green);
   transition: all 0.4s;
- }
- 
- .cube:hover .bg-right,
- .cube:hover .bg,
- .cube:hover .bg-top {
+}
+
+.cube:hover .bg-right,
+.cube:hover .bg,
+.cube:hover .bg-top {
   background: var(--colors-pallete-green);
- }
- 
- .cube:active {
+}
+
+.cube:active {
   z-index: 9999;
-  animation: bounce .1s linear;
- }
- 
- @keyframes bounce {
+  animation: bounce 0.1s linear;
+}
+
+@keyframes bounce {
   50% {
-   transform: scale(0.9);
+    transform: scale(0.9);
   }
- }
+}
